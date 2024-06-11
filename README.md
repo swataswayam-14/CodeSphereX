@@ -1,4 +1,4 @@
-## CodeFusion: A NextJS-based Code Submission and Judging System
+## CodeSphereX: A NextJS-based Code Submission and Judging System
 
 
 ### Overview
