@@ -5,9 +5,6 @@ import { NextAuthOptions } from "next-auth";
 import { JWT } from "next-auth/jwt";
 import { JWTPayload, SignJWT, importJWK } from "jose";
 import { Session } from "next-auth";
-import { PassThrough } from "stream";
-import { TokenExpiredError } from "jsonwebtoken";
-import Email from "next-auth/providers/email";
 
 interface token extends JWT {
     uid: string;
@@ -80,7 +77,7 @@ export const authOptions = {
                             email:credentials.username,
                             token:jwt
                         };
-                        
+
                     }else{
                         return null;
                     }
@@ -118,7 +115,7 @@ export const authOptions = {
     ],
     secret:process.env.NEXTAUTH_SECRET || "secr3t",
     callbacks :{
-        session: async ({session , token}:any) => {
+        session: async ({session , token}) => {
             const newSession: session = session as session;
             if(newSession.user && token.uid) {
                 newSession.user.id = token.uid as string;
