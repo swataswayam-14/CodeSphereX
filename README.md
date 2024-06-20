@@ -6,7 +6,7 @@
 CodeFusion is a NextJS-based code submission and judging system designed to facilitate the evaluation of user-submitted code against a set of test cases. The system utilizes a combination of NextJS, PostgreSQL, and Judge0 API to provide a seamless and efficient experience for users.
 
 
-### System Design
+## System Design
 
 
 ### Frontend (NextJS)
